@@ -24,8 +24,7 @@ The platform collects financial data from external sources, stores raw data in o
 
 ## Architecture
 
-![architecture picture](finance data.drawio.png)
-
+<img src="finance data.drawio.png" alt="architecture picture">
 
 ---
 
