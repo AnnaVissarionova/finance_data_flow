@@ -1,0 +1,56 @@
+version: 2
+
+models:
+
+  - name: stg_frankfurter
+
+    description: Cleaned and validated FX exchange rates.
+
+    columns:
+
+      - name: date
+        tests:
+          - not_null
+
+      - name: base
+        tests:
+          - not_null
+
+      - name: quote
+        tests:
+          - not_null
+
+      - name: rate
+        tests:
+          - not_null
+
+
+  - name: stg_yfinance
+
+    description: Cleaned and validated market data.
+
+    columns:
+
+      - name: date
+        tests:
+          - not_null
+
+      - name: instrument
+        tests:
+          - not_null
+
+      - name: open
+        tests:
+          - not_null
+
+      - name: high
+        tests:
+          - not_null
+
+      - name: low
+        tests:
+          - not_null
+
+      - name: close
+        tests:
+          - not_null

@@ -1,0 +1,15 @@
+name: finance_dbt
+version: "1.0.0"
+profile: finance_dbt
+
+model-paths:
+  - models
+
+models:
+  finance_dbt:
+    staging:
+      +materialized: view
+    silver:
+      +materialized: table
+    gold:
+      +materialized: table

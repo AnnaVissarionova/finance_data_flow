@@ -1,0 +1,69 @@
+version: 2
+
+models:
+
+  - name: silver_finance
+
+    description: >
+      Unified Silver dataset containing cleaned and normalized
+      foreign exchange and financial market data.
+
+    columns:
+
+      - name: date
+        description: Trading or observation date.
+        tests:
+          - not_null
+
+      - name: asset_type
+        description: Asset category, either FX or EQUITY.
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - FX
+                - EQUITY
+
+      - name: instrument
+        description: >
+          Financial instrument identifier, for example EUR/USD
+          or ^GSPC.
+        tests:
+          - not_null
+
+      - name: base
+        description: Base currency for FX instruments.
+
+      - name: quote
+        description: Quote currency for FX instruments.
+
+      - name: open
+        description: Opening market price for equity instruments.
+
+      - name: high
+        description: Highest market price for equity instruments.
+
+      - name: low
+        description: Lowest market price for equity instruments.
+
+      - name: close
+        description: Closing market price for equity instruments.
+
+      - name: adj_close
+        description: Adjusted closing price for equity instruments.
+
+      - name: volume
+        description: Trading volume for equity instruments.
+
+      - name: rate
+        description: Exchange rate for FX instruments.
+
+      - name: return
+        description: >
+          Simple daily return calculated as
+          value_t / value_t-1 - 1.
+
+      - name: source
+        description: Original data source.
+        tests:
+          - not_null

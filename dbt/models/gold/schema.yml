@@ -1,0 +1,53 @@
+version: 2
+
+models:
+
+  - name: gold_market_data
+    description: >
+      Wide analytical dataset combining FX and equity market data
+      by date. Contains market levels, logarithmic returns and
+      squared returns as a daily volatility proxy.
+
+    columns:
+
+      - name: date
+        description: Trading/observation date.
+        tests:
+          - not_null
+          - unique
+
+      - name: eur_usd
+        description: EUR/USD exchange rate.
+
+      - name: eur_gbp
+        description: EUR/GBP exchange rate.
+
+      - name: eur_jpy
+        description: EUR/JPY exchange rate.
+
+      - name: eur_chf
+        description: EUR/CHF exchange rate.
+
+      - name: gbp_usd
+        description: GBP/USD exchange rate.
+
+      - name: usd_jpy
+        description: USD/JPY exchange rate.
+
+      - name: gspc
+        description: S&P 500 index level.
+
+      - name: stoxx50e
+        description: EURO STOXX 50 index level.
+
+      - name: gdaxi
+        description: DAX index level.
+
+      - name: ftse
+        description: FTSE 100 index level.
+
+      - name: n225
+        description: Nikkei 225 index level.
+
+      - name: hsi
+        description: Hang Seng Index level.

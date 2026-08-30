@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+
+.venv/
+.env
+
+data/
+logs/
+
+# Airflow
+airflow/airflow.cfg
+airflow/webserver_config.py
+
+# dbt
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+
+# DuckDB
+*.duckdb
+*.duckdb.wal
